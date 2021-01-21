@@ -100,6 +100,11 @@ h2 {
   justify-content: center;
 }
 
+.title-block-text {
+  position: absolute;
+  top: 42%;
+}
+
 .about-section {
   background-image: url(/src/img/wave-coolBlue-copy2.svg);
   min-height: 75vh;
