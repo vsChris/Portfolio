@@ -5,7 +5,8 @@ html {
   --grey: #829399;
   --tan: #d2b48c;
   --violet: #4c3b4d;
-  --blue: #3b719f;
+  --mutedBlue: #3b719f;
+  --blue: #3697e4;
   --white: #ffffff;
   --backgroundGrey: #f3f4f5;
 }
@@ -55,16 +56,19 @@ h2 {
 
 .top-nav-list li a:hover {
   text-shadow: 2px -2px 10px var(--tan);
-  border-color: var(--blue);
+  border-color: var(--tan);
 }
 
 /* HERO SECTION  */
 
 .hero-section {
   min-height: 100vh;
-  background-image: url(img/mac-back.jpeg);
+  max-width: 100%;
+  /* background-image: url(img/mac-back.jpeg); */
+  background-image: url(img/dev-wallpaper.jpg);
   background-color: var(--blue);
-  background-size: auto 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .top-nav-list {
@@ -96,14 +100,8 @@ h2 {
   justify-content: center;
 }
 
-.title-block-text {
-  position: absolute;
-  top: 5em;
-}
-
 .about-section {
   background-image: url(/src/img/wave-coolBlue-copy2.svg);
-  /* min-height: 550px; */
   min-height: 75vh;
   background-size: cover;
 }
