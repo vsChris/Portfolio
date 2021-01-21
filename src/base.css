@@ -61,7 +61,7 @@ h2 {
 /* HERO SECTION  */
 
 .hero-section {
-  min-height: 400px;
+  min-height: 100vh;
   background-image: url(img/mac-back.jpeg);
   background-color: var(--blue);
   background-size: auto 100%;
@@ -103,7 +103,14 @@ h2 {
 
 .about-section {
   background-image: url(/src/img/wave-coolBlue-copy2.svg);
-  min-height: 550px;
+  /* min-height: 550px; */
+  min-height: 75vh;
   background-size: cover;
-  /* background-size: auto 100%; */
+}
+
+.about-block {
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
