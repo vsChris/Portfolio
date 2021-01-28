@@ -44,10 +44,6 @@ h2 {
   color: var(--white);
 }
 
-.section-block {
-  display: grid;
-}
-
 .top-nav-list li a {
   transition: 1s;
   border-bottom: 2px solid transparent;
@@ -113,7 +109,52 @@ h2 {
 
 .about-block {
   width: 75vw;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.projects-section {
+  min-height: 75vh;
+  background-image: url(/src/img/wave-coolBlue-inverse.svg);
+  background-size: cover;
+}
+
+.project-cards-block {
+  width: 90vw;
+  margin: auto;
+  padding-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.05em;
+}
+
+.project-card {
+  display: inline-block;
+  height: 350px;
+}
+
+.contact-section {
+  min-height: 50vh;
+  background-image: url(/src/img/wave-tan.svg);
+  background-size: cover;
+}
+
+.contact-block {
+  width: 90vw;
+  margin: auto;
+}
+
+footer {
+  font-weight: 100;
+  font-size: 1rem;
+  min-height: 10vh;
+  background-image: url(/src/img/wave-tan-inverse.svg);
+  background-size: cover;
+}
+
+footer div {
+  width: 90vw;
+  margin: auto;
 }
