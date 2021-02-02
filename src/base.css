@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.5;
   background-color: var(--backgroundGrey);
 }
@@ -50,11 +50,6 @@ h2 {
   border-top: 2px solid transparent;
 }
 
-.top-nav-list li a:hover {
-  text-shadow: 2px -2px 10px var(--tan);
-  border-color: var(--tan);
-}
-
 .section-header {
   border-bottom: 2px solid var(--tan);
   width: 80%;
@@ -66,27 +61,34 @@ h2 {
   color: var(--blue);
 }
 
+.hamburger {
+  display: none;
+  background-image: url(img/menu-black-36dp.svg);
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  left: 20px;
+  height: 48px;
+  width: 48px;
+  background-color: transparent;
+  border: none;
+}
 /* HERO SECTION  */
 
 .hero-section {
-  min-height: 100vh;
-  /* max-height: 685px; */
-  max-width: 100%;
-  /* background-image: url(img/dev-wallpaper.jpg); */
+  min-height: 705px;
+  position: relative;
+  background: url(img/dev-wallpaper.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
   background-color: var(--blue);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.hamburger {
-  display: none;
 }
 
 .top-nav-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr repeat(3, auto);
-  gap: 0.05em;
+  grid-template-columns: repeat(3, 30%);
+  gap: 1.05em;
   justify-content: center;
   justify-items: center;
 }
@@ -95,11 +97,6 @@ h2 {
   margin-top: 0.5em;
   display: inline-block;
   margin-right: 2rem;
-}
-
-.nav-left-grid {
-  justify-self: start;
-  margin-left: 2em;
 }
 
 .title-block {
@@ -111,7 +108,8 @@ h2 {
 }
 
 .title-block-text {
-  margin-top: 24%;
+  position: relative;
+  top: 227px;
 }
 
 .title-block-text h2 {
@@ -123,8 +121,9 @@ h2 {
 }
 /* -------- HERO END -------------- */
 
+/* -------- ABOUT SECTION --------- */
 .about-section {
-  background-image: url(/src/img/wave-coolBlue-copy2.svg);
+  background-image: url(/src/img/wave-coolBlue.svg);
   height: 400px;
   background-size: cover;
 }
@@ -142,6 +141,9 @@ h2 {
   align-items: center;
 }
 
+/* ----- ABOUT SECTION END --------- */
+
+/* -------- PROJECTS SECTION ------------ */
 .projects-section {
   height: 450px;
   margin-bottom: 50px;
@@ -164,30 +166,26 @@ h2 {
   transition: 1.25s;
 }
 
-.project-card:hover {
-  box-shadow: 0 0px 5px 3px #f5f6f8;
-  margin-right: 10px;
-  margin-left: 10px;
+@media (min-width: 1024px) {
+  project-card:hover {
+    box-shadow: 0 0px 5px 3px #f5f6f8;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }
 
-.contact-section {
-  max-height: 50vh;
-  background-image: url(/src/img/wave-tan.svg);
-  background-size: cover;
-}
-
-.contact-block {
-  width: 90vw;
-  margin: 20px auto;
-}
+/* -------- PROJECTS SECTION END ---------- */
 
 footer {
+  width: 100%;
   padding-top: 15px;
   font-weight: 100;
   font-size: 1rem;
-  height: 10vh;
-  background-image: url(/src/img/wave-tan-inverse.svg);
+  height: 150px;
+  /* background-image: url(/src/img/wave-tan-edit.png); */
+  background-image: url(/src/img/wave-tan-footer.svg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 footer div {
@@ -197,24 +195,17 @@ footer div {
 
 /* ---------- MEDIA QUERIES ------------- */
 
-@media (max-width: 480px) {
+@media (min-width: 360px) and (max-width: 413px) {
+  .section-content {
+    font-size: 1.35rem;
+  }
+
   .hamburger {
     display: initial;
-    background-image: url(img/menu-black-36dp.svg);
-    position: absolute;
-    z-index: 1000;
-    top: 20px;
-    left: 20px;
-    height: 48px;
-    width: 48px;
-    background-color: transparent;
-    border: none;
   }
 
   .hero-section {
-    background-image: url(img/dev-wallpaper-mobile.jpg);
-    background-size: cover;
-    min-height: 552px;
+    min-height: 500px;
   }
 
   .top-nav-list {
@@ -222,7 +213,60 @@ footer div {
   }
 
   .title-block-text {
-    margin-top: 62%;
+    position: relative;
+    top: 200px;
+  }
+
+  .title-block-text h1 {
+    font-size: 36px;
+    padding-left: 4px;
+  }
+
+  .title-block-text h2 {
+    font-size: 28px;
+    padding-left: 25px;
+  }
+
+  .about-section {
+    height: 365px;
+  }
+
+  .project-cards-block {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.35em;
+  }
+
+  .projects-section {
+    height: 850px;
+  }
+
+  .project-card {
+    height: 250px;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 702px) {
+  .section-content {
+    font-size: 1.35rem;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .hero-section {
+    min-height: 560px;
+  }
+
+  .top-nav-list {
+    display: none;
+  }
+
+  .title-block-text {
+    position: relative;
+    top: 230px;
   }
 
   .title-block-text h1 {
@@ -236,10 +280,7 @@ footer div {
   }
 
   .about-section {
-    background-image: url(/src/img/wave-coolBlue-copy2.svg);
     height: 400px;
-    background-size: cover;
-    font-size: 1.5rem;
   }
 
   .projects-section {
@@ -248,7 +289,6 @@ footer div {
 
   .project-cards-block {
     margin: auto;
-    /* padding-top: 75px; */
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 0.35em;
@@ -256,6 +296,66 @@ footer div {
 
   .project-card {
     height: 200px;
+  }
+
+  .contact-section {
+    height: 250px;
+  }
+}
+
+@media (min-width: 703px) and (max-width: 1023px) {
+  .section-content {
+    font-size: 1.35rem;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .hero-section {
+    min-height: 560px;
+  }
+
+  .top-nav-list {
+    display: none;
+  }
+
+  .title-block-text {
+    position: relative;
+    top: 230px;
+  }
+
+  .title-block-text h1 {
+    font-size: 40px;
+    padding-left: 20px;
+  }
+
+  .title-block-text h2 {
+    font-size: 30px;
+    padding-left: 31px;
+  }
+
+  .about-section {
+    height: 400px;
+  }
+
+  .projects-section {
+    height: 850px;
+    margin-bottom: 95px;
+  }
+
+  .project-cards-block {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.35em;
+  }
+
+  .project-card {
+    height: 250px;
+    width: 65%;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 0px 5px 3px #f5f6f8;
   }
 
   .contact-section {
