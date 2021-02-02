@@ -252,6 +252,7 @@ footer div {
 
   .project-card {
     height: 250px;
+    width: auto;
   }
 }
 
@@ -306,6 +307,7 @@ footer div {
 
   .project-card {
     height: 200px;
+    width: auto;
   }
 
   .contact-section {
