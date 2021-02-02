@@ -167,13 +167,6 @@ h2 {
   transition: 1.25s;
 }
 
-@media (min-width: 1024px) {
-  .project-card:hover {
-    box-shadow: 0 0px 5px 3px #f5f6f8;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
 /* -------- PROJECTS SECTION END ---------- */
 /* ---------- FOOTER SECTION ------------- */
 footer {
@@ -363,5 +356,19 @@ footer div {
 
   .contact-section {
     height: 250px;
+  }
+
+  /* ------------- 1024px > --------------  */
+  @media (min-width: 1024px) {
+    .top-nav-list li a:hover {
+      border-bottom: 2px solid var(--tan);
+      border-top: 2px solid var(--tan);
+    }
+
+    .project-card:hover {
+      box-shadow: 0 0px 5px 3px #f5f6f8;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
   }
 }
