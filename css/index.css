@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+/* --------- VARIABLES --------- */
+html {
+  --grey: #829399;
+  --tan: #d2b48c;
+  --violet: #4c3b4d;
+  --mutedBlue: #3b719f;
+  --blue: #3697e4;
+  --white: #ffffff;
+  --backgroundGrey: #f3f4f5;
+}
+
+/* ------- VARIABLES END ------- */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  background-color: var(--backgroundGrey);
+}
+
+a {
+  font-weight: 300;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+h1 {
+  font-weight: 500;
+  color: var(--white);
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  color: var(--white);
+}
+
+.section-header {
+  border-bottom: 2px solid var(--tan);
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 5px 5px -5px #f5f6f8;
+}
+
+.blue-text {
+  color: var(--blue);
+}
+
+.hamburger {
+  display: none;
+  background-image: url(/img/menu-black-36dp.svg);
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  left: 20px;
+  height: 48px;
+  width: 48px;
+  background-color: transparent;
+  border: none;
+}
+/* HEADER SECTION  */
+
+.hero-section {
+  min-height: 705px;
+  position: relative;
+  background: url(/img/dev-wallpaper.jpg) no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+  background-color: var(--blue);
+}
+
+.top-nav-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  gap: 1.05em;
+  justify-content: center;
+  justify-items: center;
+}
+
+.top-nav-list li {
+  margin-top: 0.5em;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.top-nav-list li a {
+  transition: 1s;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+
+.title-block {
+  width: 75%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-block-text {
+  position: relative;
+  top: 227px;
+}
+
+.title-block-text h2 {
+  padding-left: 6.5%;
+}
+
+.section-content {
+  font-size: 1.5rem;
+}
+/* -------- HEADER END -------------- */
+
+/* -------- ABOUT SECTION --------- */
+.about-section {
+  background-image: url(/img/wave-coolBlue.svg);
+  height: 400px;
+  background-size: cover;
+}
+
+.about-section .section-header h1 {
+  padding-top: 10px;
+}
+
+.about-block {
+  width: 75vw;
+  margin: auto;
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- ABOUT SECTION END --------- */
+
+/* -------- PROJECTS SECTION ------------ */
+.projects-section {
+  height: 450px;
+  margin-bottom: 50px;
+  background-image: url(/img/wave-coolBlue-inverse.svg);
+  background-size: cover;
+}
+
+.project-cards-block {
+  width: 90vw;
+  margin: auto;
+  padding-top: 75px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.35em;
+}
+
+.project-card {
+  display: inline-block;
+  height: 350px;
+  width: 30vw;
+  transition: 1.25s;
+}
+
+/* -------- PROJECTS SECTION END ---------- */
+/* ---------- FOOTER SECTION ------------- */
+footer {
+  width: 100%;
+  padding-top: 15px;
+  font-weight: 100;
+  font-size: 1rem;
+  height: 150px;
+  background-image: url(/img/wave-tan-footer.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+footer div {
+  width: 90vw;
+  margin: auto;
+}
+
+/* ---------- MEDIA QUERIES ------------- */
+/* -------- 360PX - 413 PX ----------------- */
+@media (min-width: 360px) and (max-width: 413px) {
+  .section-content {
+    font-size: 1.35rem;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .hero-section {
+    min-height: 500px;
+  }
+
+  .top-nav-list {
+    display: none;
+  }
+
+  .title-block-text {
+    position: relative;
+    top: 200px;
+  }
+
+  .title-block-text h1 {
+    font-size: 36px;
+    padding-left: 4px;
+  }
+
+  .title-block-text h2 {
+    font-size: 28px;
+    padding-left: 25px;
+  }
+
+  .about-section {
+    height: 365px;
+  }
+
+  .project-cards-block {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.35em;
+  }
+
+  .projects-section {
+    height: 850px;
+  }
+
+  .project-card {
+    height: 250px;
+  }
+}
+
+/* --------- END----------- */
+/* --------- 414px - 702px ---------- */
+@media (min-width: 414px) and (max-width: 702px) {
+  .section-content {
+    font-size: 1.35rem;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .hero-section {
+    min-height: 560px;
+  }
+
+  .top-nav-list {
+    display: none;
+  }
+
+  .title-block-text {
+    position: relative;
+    top: 230px;
+  }
+
+  .title-block-text h1 {
+    font-size: 40px;
+    padding-left: 20px;
+  }
+
+  .title-block-text h2 {
+    font-size: 30px;
+    padding-left: 31px;
+  }
+
+  .about-section {
+    height: 400px;
+  }
+
+  .projects-section {
+    height: 700px;
+  }
+
+  .project-cards-block {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.35em;
+  }
+
+  .project-card {
+    height: 200px;
+  }
+
+  .contact-section {
+    height: 250px;
+  }
+}
+/* ---------- END ------------------- */
+/* ----------- 703px - 1023px ------------- */
+@media (min-width: 703px) and (max-width: 1023px) {
+  .section-content {
+    font-size: 1.35rem;
+  }
+
+  .hamburger {
+    display: initial;
+  }
+
+  .hero-section {
+    min-height: 560px;
+  }
+
+  .top-nav-list {
+    display: none;
+  }
+
+  .title-block-text {
+    position: relative;
+    top: 230px;
+  }
+
+  .title-block-text h1 {
+    font-size: 40px;
+    padding-left: 20px;
+  }
+
+  .title-block-text h2 {
+    font-size: 30px;
+    padding-left: 31px;
+  }
+
+  .about-section {
+    height: 400px;
+  }
+
+  .projects-section {
+    height: 850px;
+    margin-bottom: 95px;
+  }
+
+  .project-cards-block {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.35em;
+  }
+
+  .project-card {
+    height: 250px;
+    width: 65%;
+    margin: 0 auto 10px auto;
+    box-shadow: 0 0px 5px 3px #f5f6f8;
+  }
+
+  .contact-section {
+    height: 250px;
+  }
+}
+/* ------------- 1024px > --------------  */
+@media (min-width: 1024px) {
+  .top-nav-list li a:hover {
+    border-bottom: 2px solid var(--tan);
+    border-top: 2px solid var(--tan);
+  }
+
+  .project-card:hover {
+    box-shadow: 0 0px 5px 3px #f5f6f8;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
