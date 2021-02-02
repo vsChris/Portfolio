@@ -65,8 +65,8 @@ h2 {
 /* HERO SECTION  */
 
 .hero-section {
-  /* height: 100vh; */
-  max-height: 685px;
+  min-height: 100vh;
+  /* max-height: 685px; */
   max-width: 100%;
   /* background-image: url(img/dev-wallpaper.jpg); */
   background-color: var(--blue);
