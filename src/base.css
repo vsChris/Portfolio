@@ -62,6 +62,10 @@ h2 {
   box-shadow: 0 5px 5px -5px #f5f6f8;
 }
 
+.blue-text {
+  color: var(--blue);
+}
+
 /* HERO SECTION  */
 
 .hero-section {
@@ -114,10 +118,19 @@ h2 {
   padding-left: 6.5%;
 }
 
+.section-content {
+  font-size: 1.5rem;
+}
+/* -------- HERO END -------------- */
+
 .about-section {
   background-image: url(/src/img/wave-coolBlue-copy2.svg);
   height: 400px;
   background-size: cover;
+}
+
+.about-section .section-header h1 {
+  padding-top: 10px;
 }
 
 .about-block {
@@ -148,8 +161,6 @@ h2 {
 .project-card {
   display: inline-block;
   height: 350px;
-  /* border-bottom: 1px solid #ffff; */
-  /* box-shadow: 0 5px 5px -2px var(--tan); */
   transition: 1.25s;
 }
 
@@ -167,10 +178,11 @@ h2 {
 
 .contact-block {
   width: 90vw;
-  margin: auto;
+  margin: 20px auto;
 }
 
 footer {
+  padding-top: 15px;
   font-weight: 100;
   font-size: 1rem;
   height: 10vh;
@@ -187,6 +199,7 @@ footer div {
 
 @media (max-width: 480px) {
   .hamburger {
+    display: initial;
     background-image: url(img/menu-black-36dp.svg);
     position: absolute;
     z-index: 1000;
@@ -201,7 +214,7 @@ footer div {
   .hero-section {
     background-image: url(img/dev-wallpaper-mobile.jpg);
     background-size: cover;
-    height: 552px;
+    min-height: 552px;
   }
 
   .top-nav-list {
@@ -226,6 +239,11 @@ footer div {
     background-image: url(/src/img/wave-coolBlue-copy2.svg);
     height: 400px;
     background-size: cover;
+    font-size: 1.5rem;
+  }
+
+  .projects-section {
+    height: 700px;
   }
 
   .project-cards-block {
@@ -234,5 +252,13 @@ footer div {
     display: grid;
     grid-template-columns: repeat(1, auto);
     gap: 0.35em;
+  }
+
+  .project-card {
+    height: 200px;
+  }
+
+  .contact-section {
+    height: 250px;
   }
 }
