@@ -163,19 +163,19 @@ h2 {
 .project-card {
   display: inline-block;
   height: 350px;
+  width: 30vw;
   transition: 1.25s;
 }
 
 @media (min-width: 1024px) {
-  project-card:hover {
+  .project-card:hover {
     box-shadow: 0 0px 5px 3px #f5f6f8;
     margin-right: 10px;
     margin-left: 10px;
   }
 }
-
 /* -------- PROJECTS SECTION END ---------- */
-
+/* ---------- FOOTER SECTION ------------- */
 footer {
   width: 100%;
   padding-top: 15px;
@@ -194,7 +194,7 @@ footer div {
 }
 
 /* ---------- MEDIA QUERIES ------------- */
-
+/* -------- 360PX - 413 PX ----------------- */
 @media (min-width: 360px) and (max-width: 413px) {
   .section-content {
     font-size: 1.35rem;
@@ -247,6 +247,8 @@ footer div {
   }
 }
 
+/* --------- END----------- */
+/* --------- 414px - 702px ---------- */
 @media (min-width: 414px) and (max-width: 702px) {
   .section-content {
     font-size: 1.35rem;
@@ -302,7 +304,8 @@ footer div {
     height: 250px;
   }
 }
-
+/* ---------- END ------------------- */
+/* ----------- 703px - 1023px ------------- */
 @media (min-width: 703px) and (max-width: 1023px) {
   .section-content {
     font-size: 1.35rem;
