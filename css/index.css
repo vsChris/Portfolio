@@ -248,14 +248,14 @@ footer div {
   }
 
   .projects-section {
-    height: 850px;
+    height: 800px;
   }
 
   .project-card {
     display: block;
-    height: 250px;
+    height: 225px;
     width: auto;
-    margin-bottom: 10px
+    margin-bottom: 10px;
     box-shadow: 0 0px 5px 3px #f5f6f8;
   }
 }
@@ -299,7 +299,7 @@ footer div {
   }
 
   .projects-section {
-    height: 700px;
+    height: 800px;
   }
 
   .project-cards-block {
@@ -311,7 +311,7 @@ footer div {
 
   .project-card {
     display: block;
-    height: 200px;
+    height: 225px;
     width: auto;
     margin-bottom: 10px;
     box-shadow: 0 0px 5px 3px #f5f6f8;
