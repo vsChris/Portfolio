@@ -44,12 +44,6 @@ h2 {
   color: var(--white);
 }
 
-.top-nav-list li a {
-  transition: 1s;
-  border-bottom: 2px solid transparent;
-  border-top: 2px solid transparent;
-}
-
 .section-header {
   border-bottom: 2px solid var(--tan);
   width: 80%;
@@ -73,7 +67,7 @@ h2 {
   background-color: transparent;
   border: none;
 }
-/* HERO SECTION  */
+/* HEADER SECTION  */
 
 .hero-section {
   min-height: 705px;
@@ -99,6 +93,12 @@ h2 {
   margin-right: 2rem;
 }
 
+.top-nav-list li a {
+  transition: 1s;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+}
+
 .title-block {
   width: 75%;
   margin: auto;
@@ -119,7 +119,7 @@ h2 {
 .section-content {
   font-size: 1.5rem;
 }
-/* -------- HERO END -------------- */
+/* -------- HEADER END -------------- */
 
 /* -------- ABOUT SECTION --------- */
 .about-section {
@@ -357,18 +357,17 @@ footer div {
   .contact-section {
     height: 250px;
   }
+}
+/* ------------- 1024px > --------------  */
+@media (min-width: 1024px) {
+  .top-nav-list li a:hover {
+    border-bottom: 2px solid var(--tan);
+    border-top: 2px solid var(--tan);
+  }
 
-  /* ------------- 1024px > --------------  */
-  @media (min-width: 1024px) {
-    .top-nav-list li a:hover {
-      border-bottom: 2px solid var(--tan);
-      border-top: 2px solid var(--tan);
-    }
-
-    .project-card:hover {
-      box-shadow: 0 0px 5px 3px #f5f6f8;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
+  .project-card:hover {
+    box-shadow: 0 0px 5px 3px #f5f6f8;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 }
