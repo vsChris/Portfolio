@@ -101,6 +101,7 @@ h2 {
   gap: 1.05em;
   justify-content: center;
   justify-items: center;
+  transition: 1s;
 }
 
 .top-nav-list li {
@@ -251,8 +252,11 @@ footer div {
   }
 
   .project-card {
+    display: block;
     height: 250px;
     width: auto;
+    margin-bottom: 10px
+    box-shadow: 0 0px 5px 3px #f5f6f8;
   }
 }
 
@@ -306,8 +310,11 @@ footer div {
   }
 
   .project-card {
+    display: block;
     height: 200px;
     width: auto;
+    margin-bottom: 10px;
+    box-shadow: 0 0px 5px 3px #f5f6f8;
   }
 
   .contact-section {
