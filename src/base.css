@@ -55,16 +55,27 @@ h2 {
   border-color: var(--tan);
 }
 
+.section-header {
+  border-bottom: 2px solid var(--tan);
+  width: 80%;
+  margin: auto;
+  box-shadow: 0 5px 5px -5px #f5f6f8;
+}
+
 /* HERO SECTION  */
 
 .hero-section {
-  min-height: 100vh;
+  /* height: 100vh; */
+  max-height: 685px;
   max-width: 100%;
-  /* background-image: url(img/mac-back.jpeg); */
-  background-image: url(img/dev-wallpaper.jpg);
+  /* background-image: url(img/dev-wallpaper.jpg); */
   background-color: var(--blue);
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+.hamburger {
+  display: none;
 }
 
 .top-nav-list {
@@ -89,34 +100,38 @@ h2 {
 
 .title-block {
   width: 75%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .title-block-text {
-  position: absolute;
-  top: 42%;
+  margin-top: 24%;
+}
+
+.title-block-text h2 {
+  padding-left: 6.5%;
 }
 
 .about-section {
   background-image: url(/src/img/wave-coolBlue-copy2.svg);
-  min-height: 75vh;
+  height: 400px;
   background-size: cover;
 }
 
 .about-block {
   width: 75vw;
   margin: auto;
+  padding-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .projects-section {
-  min-height: 75vh;
+  height: 450px;
+  margin-bottom: 50px;
   background-image: url(/src/img/wave-coolBlue-inverse.svg);
   background-size: cover;
 }
@@ -127,16 +142,25 @@ h2 {
   padding-top: 75px;
   display: grid;
   grid-template-columns: repeat(3, auto);
-  gap: 0.05em;
+  gap: 0.35em;
 }
 
 .project-card {
   display: inline-block;
   height: 350px;
+  /* border-bottom: 1px solid #ffff; */
+  /* box-shadow: 0 5px 5px -2px var(--tan); */
+  transition: 1.25s;
+}
+
+.project-card:hover {
+  box-shadow: 0 0px 5px 3px #f5f6f8;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .contact-section {
-  min-height: 50vh;
+  max-height: 50vh;
   background-image: url(/src/img/wave-tan.svg);
   background-size: cover;
 }
@@ -149,7 +173,7 @@ h2 {
 footer {
   font-weight: 100;
   font-size: 1rem;
-  min-height: 10vh;
+  height: 10vh;
   background-image: url(/src/img/wave-tan-inverse.svg);
   background-size: cover;
 }
@@ -157,4 +181,58 @@ footer {
 footer div {
   width: 90vw;
   margin: auto;
+}
+
+/* ---------- MEDIA QUERIES ------------- */
+
+@media (max-width: 480px) {
+  .hamburger {
+    background-image: url(img/menu-black-36dp.svg);
+    position: absolute;
+    z-index: 1000;
+    top: 20px;
+    left: 20px;
+    height: 48px;
+    width: 48px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .hero-section {
+    background-image: url(img/dev-wallpaper-mobile.jpg);
+    background-size: cover;
+    height: 552px;
+  }
+
+  .top-nav-list {
+    display: none;
+  }
+
+  .title-block-text {
+    margin-top: 62%;
+  }
+
+  .title-block-text h1 {
+    font-size: 40px;
+    padding-left: 20px;
+  }
+
+  .title-block-text h2 {
+    font-size: 30px;
+    padding-left: 31px;
+  }
+
+  .about-section {
+    background-image: url(/src/img/wave-coolBlue-copy2.svg);
+    height: 400px;
+    background-size: cover;
+  }
+
+  .project-cards-block {
+    margin: auto;
+    /* padding-top: 75px; */
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 0.35em;
+  }
 }
