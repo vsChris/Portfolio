@@ -57,7 +57,7 @@ h2 {
 
 .hamburger {
   display: none;
-  background-image: url(/img/menu-black-36dp.svg);
+  background-image: url(/img/menu-tan-48dp.svg);
   position: absolute;
   z-index: 1000;
   top: 20px;
@@ -66,7 +66,23 @@ h2 {
   width: 48px;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
+
+.hamburger-open {
+  display: none;
+  background-image: url(/img/menu-open-tan-48dp.svg);
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  left: 20px;
+  height: 48px;
+  width: 48px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* HEADER SECTION  */
 
 .hero-section {
@@ -192,7 +208,7 @@ footer div {
     font-size: 1.35rem;
   }
 
-  .hamburger {
+  .hamburger-open {
     display: initial;
   }
 
@@ -362,6 +378,7 @@ footer div {
   .top-nav-list li a:hover {
     border-bottom: 2px solid var(--tan);
     border-top: 2px solid var(--tan);
+    cursor: pointer;
   }
 
   .project-card:hover {
