@@ -1,7 +1,6 @@
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav-list');
 const navLinks = document.querySelectorAll('.nav-list-link');
-// console.log(navLinks);
 let menuOpen = false;
 
 function isMenuOpen() {
@@ -9,12 +8,10 @@ function isMenuOpen() {
     menuBtn.classList.add('open');
     menuOpen = true;
     nav.classList.add('show');
-    // navLinks.forEach((link) => link.classList.add('display'));
   } else {
     menuBtn.classList.remove('open');
     menuOpen = false;
     nav.classList.remove('show');
-    // navLinks.forEach((link) => link.classList.remove('display'));
   }
 }
 
